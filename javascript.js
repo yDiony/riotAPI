@@ -1,6 +1,6 @@
 const inputPesquisa = document.querySelector('.inputPesquisa');
 const botaoPesquisa = document.querySelector('.botaoPesquisa');
-const API_KEY = "RGAPI-9f9e3d45-eefc-473d-b199-c28897784639";
+const API_KEY = "RGAPI-231d8616-8f57-4182-95f7-c648480194ec";
 var playerimg = document.querySelector('.playerimg');
 var playerlevel = document.querySelector('.playerlevel');
 var playernick = document.querySelector('.playernick');
@@ -10,15 +10,17 @@ function resultados(players){
     fetch(`https://br1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${players}` + `?api_key=` + API_KEY)
     .then(response => {
         if (!response.ok) {
+            alert("Player não encontrado!");
             throw new Error(`player não encontrado`)
+            
          }
         return response.json();
         })
+    
 
         .then(function(mostrarPLayer){
             console.log(mostrarPLayer)
             var nickPlayer = mostrarPLayer.name
-            var idplayer = mostrarPLayer.id
             var imagemPlayer = mostrarPLayer.profileIconId
             var levelPlayer = mostrarPLayer.summonerLevel
             var pesquisadosplayers = document.querySelector('.pesquisadosplayers')  
@@ -27,15 +29,14 @@ function resultados(players){
             playernick.innerHTML = `<h4>NOME DO JOGADOR: ${nickPlayer}</h4>`
             playerimg.innerHTML = `<img src="${linkimg + imagemPlayer + ".png"}"</img>`
             playerlevel.innerHTML = `<h4>Summoner level: ${levelPlayer}</h4>`
+        
         })
-    }
-    //  function ranks(players){
-    //      fetch(`https://br1.api.riotgames.com/lol//league/v4/entries/by-summoner/${playerid}` + `?api_key=` + API_KEY)
-    //          .then(function(mostrarPLayer){
-    //              console.log(mostrarPLayer)
-                
-    //          })
-    //      }
+    } 
+            
+         
+        
+        
+    
   
     botaoPesquisa.addEventListener('onclick', function(){
         resultados(inputPesquisa.value)
