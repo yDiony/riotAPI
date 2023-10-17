@@ -1,6 +1,6 @@
 const inputPesquisa = document.querySelector('.inputPesquisa');
 const botaoPesquisa = document.querySelector('.botaoPesquisa');
-const API_KEY = "RGAPI-231d8616-8f57-4182-95f7-c648480194ec";
+const API_KEY = "RGAPI-f4e6a670-f445-4ffb-9b29-e119fb4c97cd";
 var playerimg = document.querySelector('.playerimg');
 var playerlevel = document.querySelector('.playerlevel');
 var playernick = document.querySelector('.playernick');
