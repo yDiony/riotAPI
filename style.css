@@ -6,7 +6,7 @@ body {
 }
 
 hr {
-    width: 99.7%;
+    width: 99.65%;
     height: 1vh;
     background-color: black;
 }
@@ -120,10 +120,6 @@ footer {
     height: 25vw;
 }
 
-.corpodosite {
-   display: flex;
-   justify-content: end;
-}
 
 #conteudo1{
     display: flex;

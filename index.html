@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site para pesquisar players de league of legends.">
+    <meta name="author" content="Diony Rinker">
+    <meta name="keywords" content="Games, busca, players, league of legends">
     <script src="https://kit.fontawesome.com/f6df8b84c1.js" crossorigin="anonymous"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
@@ -15,20 +18,20 @@
 <body>
     <header>
         <div id="logo">
-            <img id="lollogo" src="https://i.ibb.co/DpWP73S/lollogo.png"></img>
+            <img id="lollogo" src="https://i.ibb.co/DpWP73S/lollogo.png" alt="Logo do jogo eletronico League of Legends (Letra L amarela com fundo azul)"></img>
             <h3 id="textoheader">LOL TRACKER</h3>
         </div>
         <hr>
     </header>
     
-    <div class="corpoDoSite">
+    <div class="corpoSite">
         <h3 class="descricao">BUSQUE INFORMAÇÕES SOBRE PLAYERS DE</h3>
         <img id="leagueoflegendsimg" src="imgs/League-of-Legends-Logo.png"></img>
-        <img id="jinx" src="imgs/Jinx_LOL_Render_2.webp"></img>
+        <img id="jinx" src="imgs/Jinx_LOL_Render_2.webp" alt="Personagem do jogo League of Legends, cabelo azul e aspecto colorido de desenho, segunrando uma arma"></img>
         <div class="pesquisa">
             <div class="caixaPesquisa">
                 <input class="inputPesquisa" type="text" placeholder="Ex: Bruno, darkjwr, etc..." >
-                <button class="botaoPesquisa"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button onclick="resultados(inputPesquisa.value)" class="botaoPesquisa"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
         </div>
         <div class="pesquisadosplayers">
