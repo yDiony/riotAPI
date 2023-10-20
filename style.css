@@ -10,7 +10,9 @@ hr {
     height: 1vh;
     background-color: black;
 }
-
+.botaoPesquisa:hover{
+    cursor: pointer;
+}
 
 #textofooter{
     color:white;
